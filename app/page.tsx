@@ -1,48 +1,41 @@
 import Link from "next/link";
 import { EMAIL } from "@/lib/site";
+import { SiteFooter } from "@/components/site-footer";
 
 export default function Home() {
   return (
-    <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-6 py-10 sm:px-8 sm:py-16">
-      <header className="flex items-baseline justify-between gap-6">
-        <Link href="/" className="font-serif text-2xl tracking-tight text-foreground">
+    <div className="mx-auto flex min-h-dvh w-full max-w-2xl flex-1 flex-col px-5 pt-8 pb-5 sm:px-8 sm:pt-12 sm:pb-6 md:px-10 md:pt-16 md:pb-8">
+      <header className="reveal flex flex-wrap items-baseline justify-between gap-x-6 gap-y-3">
+        <Link href="/" className="font-serif text-xl tracking-tight text-foreground sm:text-2xl">
           Akala Labs
         </Link>
-        <a href={`mailto:${EMAIL}`} className="text-sm text-muted hover:text-foreground">
+        <a href={`mailto:${EMAIL}`} className="link-line py-1 text-sm text-muted">
           Contact
         </a>
       </header>
 
-      <main className="mt-20 flex-1 sm:mt-28">
-        <p className="text-sm tracking-wide text-muted uppercase">
+      <main className="mt-16 flex-1 sm:mt-24">
+        <p className="reveal reveal-1 text-xs tracking-wide text-muted uppercase sm:text-sm">
           AI and agents for revenue cycle
         </p>
-        <h1 className="mt-4 font-serif text-4xl leading-tight tracking-tight text-foreground sm:text-[2.75rem]">
+        <h1 className="headline reveal reveal-2 mt-4 font-serif tracking-tight text-foreground">
           We help RCM companies modernize with AI and agents.
         </h1>
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+        <p className="reveal reveal-3 mt-5 max-w-xl text-base leading-relaxed text-muted sm:mt-6 sm:text-lg">
           Your people already know the work. We build the systems that let them
           move faster—coding, claims, denials, and the rest of the cycle.
         </p>
         <a
           href={`mailto:${EMAIL}?subject=Akala%20Labs`}
-          className="mt-8 inline-flex rounded-sm bg-accent px-4 py-2.5 text-sm text-[#f6f3ee] hover:opacity-90"
+          className="cta reveal reveal-4 mt-8 inline-flex min-h-11 items-center rounded-sm bg-accent px-5 text-sm text-[#f6f3ee]"
         >
           Get in touch
         </a>
       </main>
 
-      <footer className="mt-24 flex flex-col gap-3 border-t border-line pt-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
-        <p>Akala Labs</p>
-        <div className="flex flex-wrap gap-x-5 gap-y-2">
-          <a href={`mailto:${EMAIL}`} className="hover:text-foreground">
-            {EMAIL}
-          </a>
-          <Link href="/privacy" className="hover:text-foreground">
-            Privacy
-          </Link>
-        </div>
-      </footer>
+      <div className="reveal reveal-5">
+        <SiteFooter />
+      </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { EMAIL } from "@/lib/site";
+import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — Akala Labs",
@@ -9,16 +10,16 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-6 py-10 sm:px-8 sm:py-16">
+    <div className="mx-auto flex min-h-dvh w-full max-w-2xl flex-1 flex-col px-5 pt-8 pb-5 sm:px-8 sm:pt-12 sm:pb-6 md:px-10 md:pt-16 md:pb-8">
       <header>
-        <Link href="/" className="font-serif text-2xl tracking-tight text-foreground">
+        <Link href="/" className="font-serif text-xl tracking-tight text-foreground sm:text-2xl">
           Akala Labs
         </Link>
       </header>
 
-      <main className="mt-16 space-y-8 text-foreground">
+      <main className="mt-12 flex-1 space-y-8 text-foreground sm:mt-16">
         <div>
-          <h1 className="font-serif text-3xl tracking-tight">Privacy Policy</h1>
+          <h1 className="headline font-serif tracking-tight">Privacy Policy</h1>
           <p className="mt-2 text-sm text-muted">Last updated: August 27, 2026</p>
         </div>
 
@@ -119,7 +120,7 @@ export default function PrivacyPage() {
             Questions about this policy:{" "}
             <a
               href={`mailto:${EMAIL}`}
-              className="text-accent underline-offset-4 hover:underline"
+              className="link-line text-accent"
             >
               {EMAIL}
             </a>
@@ -127,11 +128,13 @@ export default function PrivacyPage() {
         </section>
 
         <p>
-          <Link href="/" className="text-sm text-muted hover:text-foreground">
+          <Link href="/" className="link-line text-sm text-muted">
             ← Back
           </Link>
         </p>
       </main>
+
+      <SiteFooter />
     </div>
   );
 }
