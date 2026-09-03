@@ -14,4 +14,4 @@ npm run dev
    - `A` `@` → `76.76.21.21`
    - `CNAME` `www` → `cname.vercel-dns.com`
 
-Contact on the site is `shreyankkadadi@gmail.com`.
+Contact on the site is `founders@akalalabs.com`.
