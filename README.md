@@ -1,6 +1,6 @@
 # Akala Labs
 
-Marketing site for Akala Labs — AI and agents for RCM companies.
+Marketing site for Akala Labs — the real-world layer for AI.
 
 ```bash
 npm run dev

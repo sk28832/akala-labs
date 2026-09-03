@@ -20,7 +20,7 @@ export default function PrivacyPage() {
       <main className="mt-12 flex-1 space-y-8 text-foreground sm:mt-16">
         <div>
           <h1 className="headline font-serif tracking-tight">Privacy Policy</h1>
-          <p className="mt-2 text-sm text-muted">Last updated: August 27, 2026</p>
+          <p className="mt-2 text-sm text-muted">Last updated: September 3, 2026</p>
         </div>
 
         <p className="leading-relaxed text-muted">
@@ -41,6 +41,14 @@ export default function PrivacyPage() {
           <p className="leading-relaxed text-muted">
             If you email us, we receive whatever you include in that message
             (typically your address, name, and the content of the email).
+          </p>
+          <p className="leading-relaxed text-muted">
+            The “Book time” link sends you to Calendly, a third-party
+            scheduling service. If you book a meeting there, you provide your
+            name, email address, and anything you write in the booking form
+            directly to Calendly, and we receive those details so we can meet
+            with you. Calendly handles that information under its own privacy
+            policy. Please do not include PHI when booking.
           </p>
           <p className="leading-relaxed text-muted">
             Our hosting provider may automatically collect standard technical
@@ -73,8 +81,9 @@ export default function PrivacyPage() {
           <h2 className="font-medium text-foreground">Sharing</h2>
           <p className="leading-relaxed text-muted">
             We share information only with service providers that help us run
-            the site (for example, hosting) or when required by law. Those
-            providers process data on our behalf under their own terms.
+            the site (for example, hosting and scheduling) or when required by
+            law. Those providers process data on our behalf under their own
+            terms.
           </p>
         </section>
 

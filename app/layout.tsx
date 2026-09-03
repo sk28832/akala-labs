@@ -14,13 +14,13 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Akala Labs — AI and agents for RCM companies",
+  title: "Akala Labs — The real-world layer for AI",
   description:
-    "Akala Labs helps RCM companies modernize with AI and agents.",
+    "Akala Labs connects frontier labs with the domain experts whose real-world insight separates today's models from AGI.",
   metadataBase: new URL("https://akalalabs.com"),
   openGraph: {
     title: "Akala Labs",
-    description: "We help RCM companies modernize with AI and agents.",
+    description: "The real-world layer for AI.",
     url: "https://akalalabs.com",
     siteName: "Akala Labs",
     type: "website",
