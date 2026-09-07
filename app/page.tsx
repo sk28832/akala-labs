@@ -28,13 +28,12 @@ export default function Home() {
         <main className="reveal reveal-1 mt-9 space-y-4 text-base leading-relaxed text-foreground sm:mt-10 sm:text-lg">
           <p>
             Frontier models can process healthcare data. They can’t yet reason
-            about it the way a specialist does. That gap — between pattern
-            recognition and expert judgment — is what Akala Labs exists to
-            close.
+            about it the way a specialist does. That gap between pattern
+            recognition and expert judgment is what Akala Labs exists to close.
           </p>
           <p>
             We turn real-world clinical expertise into the signal models learn
-            from: not just the data, but the judgment behind it — what an expert
+            from. Not just the data, but the judgment behind it: what an expert
             saw, what they weighed, and how they reached their conclusion.
           </p>
         </main>
