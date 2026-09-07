@@ -7,6 +7,9 @@
   --line: #ddd6cc;
   --accent: #1e4d43;
   --accent-hover: #163a33;
+  --glow-core: rgba(255, 255, 255, 1);
+  --glow-tint: rgba(30, 77, 67, 0.12);
+  --glow-shade: rgba(28, 25, 23, 0.1);
 }
 
 @theme inline {
@@ -31,6 +34,43 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Static shading at the edges. Cream is already near-white, so the drifting
+   light needs something darker to read against. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background: radial-gradient(
+    80vmax 65vmax at 50% 38%,
+    transparent 22%,
+    var(--glow-shade) 100%
+  );
+}
+
+.glow {
+  position: fixed;
+  inset: -20vmax;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(34vmax 28vmax at 50% 40%, var(--glow-core), transparent 66%),
+    radial-gradient(50vmax 42vmax at 46% 36%, var(--glow-tint), transparent 70%);
+  animation: drift 22s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(-3%, -1.5%, 0) scale(1);
+    opacity: 0.75;
+  }
+  to {
+    transform: translate3d(3%, 2%, 0) scale(1.1);
+    opacity: 1;
+  }
 }
 
 .headline {
@@ -104,7 +144,8 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal,
+  .glow {
     animation: none;
   }
 

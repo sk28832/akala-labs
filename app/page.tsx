@@ -4,44 +4,47 @@ import { SiteFooter } from "@/components/site-footer";
 
 export default function Home() {
   return (
-    <div className="mx-auto flex min-h-dvh w-full max-w-2xl flex-1 flex-col px-5 py-10 sm:px-8 sm:py-12 md:px-10">
-      <div className="my-auto w-full">
-        <header className="reveal flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-          <Link
-            href="/"
-            className="font-serif text-2xl tracking-tight text-foreground sm:text-3xl"
-          >
-            Akala Labs
-          </Link>
-          <a
-            href={CALENDLY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-line py-1 text-sm text-muted"
-          >
-            Book time
-          </a>
-        </header>
+    <>
+      <div className="glow" aria-hidden="true" />
+      <div className="mx-auto flex min-h-dvh w-full max-w-2xl flex-1 flex-col px-5 py-10 sm:px-8 sm:py-12 md:px-10">
+        <div className="my-auto w-full">
+          <header className="reveal flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+            <Link
+              href="/"
+              className="font-serif text-2xl tracking-tight text-foreground sm:text-3xl"
+            >
+              Akala Labs
+            </Link>
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-line py-1 text-sm text-muted"
+            >
+              Book time
+            </a>
+          </header>
 
-        <main className="reveal reveal-1 mt-9 sm:mt-10">
-          <p className="text-base leading-relaxed text-foreground sm:text-lg">
-            Akala Labs connects domain experts with the frontier labs that need
-            their judgment. We start with medical imaging. We work with the
-            practices that produce it, structure de-identified OCT, retinal, CT,
-            MRI, X-ray, and ultrasound datasets, and capture the context that
-            makes them useful: how the study was acquired, what the reader was
-            looking for, and how they arrived at the read. That judgment is the
-            signal a raw archive cannot provide. Labs use the result as
-            datasets, evals, and research collaborations. The gap between
-            today’s model and agent stacks and AGI is the real world insight of
-            domain experts, and we facilitate that exchange.
-          </p>
-        </main>
+          <main className="reveal reveal-1 mt-9 space-y-4 text-base leading-relaxed text-foreground sm:mt-10 sm:text-lg">
+            <p>
+              Frontier models can process healthcare data. They can’t yet reason
+              about it the way a specialist does. That gap — between pattern
+              recognition and expert judgment — is what Akala Labs exists to
+              close.
+            </p>
+            <p>
+              We turn real-world clinical expertise into the signal models learn
+              from: not just the data, but the judgment behind it — what an
+              expert saw, what they weighed, and how they reached their
+              conclusion.
+            </p>
+          </main>
 
-        <div className="reveal reveal-2 mt-9 sm:mt-10">
-          <SiteFooter />
+          <div className="reveal reveal-2 mt-9 sm:mt-10">
+            <SiteFooter />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
